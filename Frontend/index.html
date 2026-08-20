@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dharohar | Local Craft. Bigger Stage.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>ध</span> DHAROHAR
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#products">Products</a>
+            <a href="#custom">Custom Work</a>
+            <a href="#mission">Our Mission</a>
+        </nav>
+
+        <button class="nav-btn" onclick="openAuthModal()">
+    Sign Up / Login
+</button>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="tag">
+                    FROM SAHARANPUR, FOR THE WORLD
+                </p>
+
+                <h1>
+                    Local Talent.
+                    <br>
+                    <span>A Bigger Stage.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Discover handcrafted furniture, traditional woodwork,
+                    home décor and unique creations made by skilled
+                    artisans of Saharanpur.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="primary-btn"
+                        onclick="scrollToSection('products')">
+                        Explore Products
+                    </button>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="scrollToSection('custom')">
+                        Find a Creator →
+                    </button>
+
+                </div>
+
+
+                <div class="stats">
+
+                    <div>
+                        <strong>20+</strong>
+                        <span>Craft Products</span>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <span>Creative Possibilities</span>
+                    </div>
+
+                    <div>
+                        <strong>1</strong>
+                        <span>Purpose</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="craft-display">
+
+                    <div class="craft-circle">
+                        🪵
+                    </div>
+
+                    <h3>
+                        Crafted Locally
+                    </h3>
+
+                    <p>
+                        Made by skilled artisans
+                    </p>
+
+                </div>
+
+
+                <div class="floating-card card-one">
+
+                    <span>🪵</span>
+
+                    <div>
+                        <b>Woodcraft</b>
+                        <small>Made locally</small>
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <span>🎨</span>
+
+                    <div>
+                        <b>Custom Work</b>
+                        <small>Made for you</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPLORE -->
+
+        <section class="section" id="explore">
+
+            <div class="section-heading">
+
+                <p class="tag">
+                    DISCOVER
+                </p>
+
+                <h2>
+                    Made by people.
+                    <br>
+                    <span>Not factories.</span>
+                </h2>
+
+                <p>
+                    Explore handcrafted products created by local
+                    craftsmen and discover the skill behind every piece.
+                </p>
+
+            </div>
+
+
+            <!-- CATEGORIES -->
+
+            <div class="category-grid">
+
+
+                <div class="category-card">
+
+                    <div class="icon">
+                        🪵
+                    </div>
+
+                    <h3>
+                        Furniture
+                    </h3>
+
+                    <p>
+                        Tables, chairs, sofas, beds and more
+                        handcrafted by local makers.
+                    </p>
+
+                    <button onclick="filterProducts('Furniture')">
+                        Explore →
+                    </button>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <div class="icon">
+                        🪑
+                    </div>
+
+                    <h3>
+                        Tables & Chairs
+                    </h3>
+
+                    <p>
+                        Beautiful wooden pieces designed for
+                        modern and traditional homes.
+                    </p>
+
+                    <button onclick="filterProducts('Tables')">
+                        Explore →
+                    </button>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <div class="icon">
+                        🏠
+                    </div>
+
+                    <h3>
+                        Home Décor
+                    </h3>
+
+                    <p>
+                        Lamps, mirrors, wall art and decorative
+                        wooden creations.
+                    </p>
+
+                    <button onclick="filterProducts('Home Decor')">
+                        Explore →
+                    </button>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <div class="icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Wood Carving
+                    </h3>
+
+                    <p>
+                        Intricate traditional carving and
+                        handcrafted wooden designs.
+                    </p>
+
+                    <button onclick="filterProducts('Wood Carving')">
+                        Explore →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+
+        <section class="products-section" id="products">
+
+            <div class="section-heading">
+
+                <p class="tag">
+                    SAHARANPUR WOODCRAFT
+                </p>
+
+                <h2>
+                    Handcrafted.
+                    <br>
+                    <span>Made to Last.</span>
+                </h2>
+
+                <p>
+                    Explore furniture and unique wooden creations
+                    made by skilled artisans from Saharanpur.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH + FILTER -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search furniture, chair, sofa, table..."
+                >
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Tables">
+                        Tables
+                    </option>
+
+                    <option value="Chairs">
+                        Chairs
+                    </option>
+
+                    <option value="Sofas">
+                        Sofas
+                    </option>
+
+                    <option value="Beds">
+                        Beds
+                    </option>
+
+                    <option value="Decor">
+                        Decor
+                    </option>
+
+                    <option value="Wood Carving">
+                        Wood Carving
+                    </option>
+
+                </select>
+
+                <button onclick="searchProducts()">
+                    Search
+                </button>
+
+                <button
+                    class="clear-btn"
+                    onclick="loadProducts()">
+                    All Products
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTS CONTAINER -->
+
+            <div
+                id="productsContainer"
+                class="product-grid">
+
+                <!-- Products loaded from backend -->
+
+            </div>
+
+        </section>
+
+
+        <!-- CUSTOM WORK -->
+
+        <section class="custom-section" id="custom">
+
+            <div class="custom-content">
+
+                <p class="tag">
+                    MAKE IT YOURS
+                </p>
+
+                <h2>
+                    Don't just buy.
+                    <br>
+                    <span>Create something.</span>
+                </h2>
+
+                <p>
+                    Have an idea for furniture, décor or woodwork?
+                    Connect with a local artisan, explain your
+                    requirements and get your idea created.
+                </p>
+
+
+                <div class="custom-features">
+
+                    <div>
+                        ✓ Custom Furniture
+                    </div>
+
+                    <div>
+                        ✓ Interior Projects
+                    </div>
+
+                    <div>
+                        ✓ Custom Woodwork
+                    </div>
+
+                    <div>
+                        ✓ Hire an Artisan
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    onclick="openCustomForm()">
+
+                    Start a Custom Project
+
+                </button>
+
+            </div>
+
+
+            <div class="project-box">
+
+                <div class="project-top">
+
+                    <span>
+                        YOUR IDEA
+                    </span>
+
+                    <span>
+                        DHAROHAR
+                    </span>
+
+                </div>
+
+
+                <div class="project-icon">
+                    ✦
+                </div>
+
+
+                <h3>
+                    Your idea.
+                </h3>
+
+                <p>
+                    Someone in your city can build it.
+                </p>
+
+
+                <div class="project-line"></div>
+
+
+                <div class="project-bottom">
+
+                    <span>
+                        Message
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                    <span>
+                        Customize
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                    <span>
+                        Create
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MISSION -->
+
+        <section class="mission" id="mission">
+
+            <p class="tag">
+                WHY DHAROHAR?
+            </p>
+
+            <h2>
+                The platform is the medium.
+                <br>
+                <span>Our people are the purpose.</span>
+            </h2>
+
+            <p>
+                Dharohar aims to give local craftsmen, artists
+                and small businesses the visibility and
+                opportunities they deserve.
+            </p>
+
+
+            <div class="mission-grid">
+
+
+                <div>
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <h3>
+                        More Reach
+                    </h3>
+
+                    <p>
+                        Take local talent beyond the boundaries
+                        of one city.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <h3>
+                        More Opportunities
+                    </h3>
+
+                    <p>
+                        Connect makers with customers and
+                        custom projects.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <h3>
+                        More Employment
+                    </h3>
+
+                    <p>
+                        Turn skills and creativity into
+                        sustainable opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOURNEY -->
+
+        <section class="future">
+
+            <p class="tag">
+                THE JOURNEY
+            </p>
+
+            <h2>
+                Saharanpur → India →
+                <span>The World</span>
+            </h2>
+
+            <p>
+                Starting local. Building trust. Growing together.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+
+            <span>ध</span>
+            DHAROHAR
+
+        </div>
+
+        <p>
+            Local talent. Bigger stage.
+        </p>
+
+        <p class="copyright">
+            © 2026 Dharohar
+        </p>
+
+    </footer>
+
+
+    <!-- MODAL -->
+<!-- AUTH MODAL -->
+
+<div class="modal" id="authModal">
+
+    <div class="auth-box">
+
+        <button
+            class="close"
+            onclick="closeAuthModal()">
+            ×
+        </button>
+
+        <div class="auth-header">
+
+            <p class="tag">
+                WELCOME TO DHAROHAR
+            </p>
+
+            <h2 id="authTitle">
+                Create your account
+            </h2>
+
+            <p id="authSubtitle">
+                Join the community of people discovering local craftsmanship.
+            </p>
+
+        </div>
+
+
+        <!-- SIGNUP -->
+
+        <form id="signupForm">
+
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Password"
+                required
+            >
+
+            <button
+                type="submit"
+                class="primary-btn auth-submit">
+                Create Account
+            </button>
+
+        </form>
+
+
+        <!-- LOGIN -->
+
+        <form
+            id="loginForm"
+            style="display: none;">
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                required
+            >
+
+            <button
+                type="submit"
+                class="primary-btn auth-submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <p
+            id="authMessage"
+            class="auth-message">
+        </p>
+
+
+        <div class="auth-switch">
+
+            <span id="switchText">
+                Already have an account?
+            </span>
+
+            <button
+                type="button"
+                onclick="toggleAuthMode()"
+                id="switchButton">
+                Login
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
